@@ -1,5 +1,5 @@
-import React from 'react';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { LucideIcon } from "lucide-react";
+import React from "react";
 
 interface FeatureCardProps {
   icon: LucideIcon;
@@ -7,7 +7,11 @@ interface FeatureCardProps {
   description: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon: Icon,
+  title,
+  description,
+}) => {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
       <div className="inline-flex items-center justify-center p-2 bg-indigo-100 rounded-lg mb-4">

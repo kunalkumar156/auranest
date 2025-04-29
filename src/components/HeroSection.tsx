@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Terminal, Code, Sparkles } from 'lucide-react';
+import React from "react";
+import { ArrowRight, Terminal, Code, Sparkles } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
@@ -11,18 +11,19 @@ const HeroSection: React.FC = () => {
               Your Expert AI Coding Assistant
             </h1>
             <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-700 max-w-xl">
-              Bolt helps you build faster with precise code implementation and expert guidance across multiple programming languages.
+              AuraNest helps you build faster with precise code implementation
+              and expert guidance across multiple programming languages.
             </p>
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#get-started" 
+              <a
+                href="#get-started"
                 className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg transition shadow-md hover:shadow-lg flex items-center justify-center"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a 
-                href="#examples" 
+              <a
+                href="#examples"
                 className="border border-gray-300 hover:border-indigo-600 text-gray-900 hover:text-indigo-600 font-medium py-3 px-8 rounded-lg transition flex items-center justify-center"
               >
                 See Examples
@@ -39,24 +40,36 @@ const HeroSection: React.FC = () => {
                 </div>
                 <div className="ml-4 text-sm font-medium text-gray-600">
                   <Terminal className="h-4 w-4 inline mr-1" />
-                  bolt-terminal
+                  AuraNest-terminal
                 </div>
               </div>
               <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm">
-                <p className="text-green-400">$ Ask Bolt to implement a feature</p>
+                <p className="text-green-400">
+                  $ Ask AuraNest to implement a feature
+                </p>
                 <p className="text-purple-400 mt-2">
-                  <span className="text-blue-400">Bolt:</span> I'll create that React component for you.
+                  <span className="text-blue-400">AuraNest:</span> I'll create
+                  that React component for you.
                 </p>
                 <div className="mt-2 text-gray-300">
-                  <span className="text-yellow-400">const</span> FeatureCard = &#123; title, description, icon: Icon &#125; =&gt; &#123;
+                  <span className="text-yellow-400">const</span> FeatureCard =
+                  &#123; title, description, icon: Icon &#125; =&gt; &#123;
                 </div>
                 <div className="ml-4 text-gray-300">
                   <span className="text-yellow-400">return</span> (
                 </div>
-                <div className="ml-8 text-blue-300">&lt;div className="..."&gt;</div>
-                <div className="ml-12 text-blue-300">&lt;Icon className="..." /&gt;</div>
-                <div className="ml-12 text-blue-300">&lt;h3&gt;&#123;title&#125;&lt;/h3&gt;</div>
-                <div className="ml-12 text-blue-300">&lt;p&gt;&#123;description&#125;&lt;/p&gt;</div>
+                <div className="ml-8 text-blue-300">
+                  &lt;div className="..."&gt;
+                </div>
+                <div className="ml-12 text-blue-300">
+                  &lt;Icon className="..." /&gt;
+                </div>
+                <div className="ml-12 text-blue-300">
+                  &lt;h3&gt;&#123;title&#125;&lt;/h3&gt;
+                </div>
+                <div className="ml-12 text-blue-300">
+                  &lt;p&gt;&#123;description&#125;&lt;/p&gt;
+                </div>
                 <div className="ml-8 text-blue-300">&lt;/div&gt;</div>
                 <div className="ml-4 text-gray-300">);</div>
                 <div className="text-gray-300">&#125;</div>

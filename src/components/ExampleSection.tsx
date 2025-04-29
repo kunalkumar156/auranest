@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Code, Check, RefreshCw, FileCode } from 'lucide-react';
+import React, { useState } from "react";
+import { Code, Check, RefreshCw, FileCode } from "lucide-react";
 
 const ExampleSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('web');
+  const [activeTab, setActiveTab] = useState("web");
 
   const examples = {
     web: {
@@ -51,7 +51,7 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;`
+export default Navbar;`,
     },
     backend: {
       prompt: "Create an Express.js API endpoint that fetches user data",
@@ -94,7 +94,7 @@ const router = express.Router();
 
 router.get('/', getUsers);
 
-export default router;`
+export default router;`,
     },
     algorithm: {
       prompt: "Write a function to find the longest palindrome substring",
@@ -138,8 +138,8 @@ function longestPalindrome(s) {
 console.log(longestPalindrome("babad")); // "bab" or "aba"
 console.log(longestPalindrome("cbbd"));  // "bb"
 console.log(longestPalindrome("a"));     // "a"
-console.log(longestPalindrome("ac"));    // "a"`
-    }
+console.log(longestPalindrome("ac"));    // "a"`,
+    },
   };
 
   return (
@@ -147,23 +147,24 @@ console.log(longestPalindrome("ac"));    // "a"`
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            See Bolt in Action
+            See AuraNest in Action
           </h2>
           <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-            From UI components to algorithms, Bolt helps you implement solutions quickly and accurately.
+            From UI components to algorithms, AuraNest helps you implement
+            solutions quickly and accurately.
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
           <div className="bg-gray-100 p-4 border-b border-gray-200">
             <div className="flex space-x-2 overflow-x-auto sm:justify-center">
               <button
                 className={`px-4 py-2 rounded-lg font-medium transition ${
-                  activeTab === 'web' 
-                    ? 'bg-indigo-600 text-white' 
-                    : 'bg-white text-gray-700 hover:bg-gray-200'
+                  activeTab === "web"
+                    ? "bg-indigo-600 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-200"
                 }`}
-                onClick={() => setActiveTab('web')}
+                onClick={() => setActiveTab("web")}
               >
                 <span className="flex items-center">
                   <Code className="h-4 w-4 mr-2" />
@@ -172,11 +173,11 @@ console.log(longestPalindrome("ac"));    // "a"`
               </button>
               <button
                 className={`px-4 py-2 rounded-lg font-medium transition ${
-                  activeTab === 'backend' 
-                    ? 'bg-indigo-600 text-white' 
-                    : 'bg-white text-gray-700 hover:bg-gray-200'
+                  activeTab === "backend"
+                    ? "bg-indigo-600 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-200"
                 }`}
-                onClick={() => setActiveTab('backend')}
+                onClick={() => setActiveTab("backend")}
               >
                 <span className="flex items-center">
                   <RefreshCw className="h-4 w-4 mr-2" />
@@ -185,11 +186,11 @@ console.log(longestPalindrome("ac"));    // "a"`
               </button>
               <button
                 className={`px-4 py-2 rounded-lg font-medium transition ${
-                  activeTab === 'algorithm' 
-                    ? 'bg-indigo-600 text-white' 
-                    : 'bg-white text-gray-700 hover:bg-gray-200'
+                  activeTab === "algorithm"
+                    ? "bg-indigo-600 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-200"
                 }`}
-                onClick={() => setActiveTab('algorithm')}
+                onClick={() => setActiveTab("algorithm")}
               >
                 <span className="flex items-center">
                   <FileCode className="h-4 w-4 mr-2" />
@@ -198,18 +199,24 @@ console.log(longestPalindrome("ac"));    // "a"`
               </button>
             </div>
           </div>
-          
+
           <div className="p-6">
             <div className="mb-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Prompt:</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Prompt:
+              </h3>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-                <p className="text-gray-700">{examples[activeTab as keyof typeof examples].prompt}</p>
+                <p className="text-gray-700">
+                  {examples[activeTab as keyof typeof examples].prompt}
+                </p>
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-center mb-2">
-                <h3 className="text-lg font-semibold text-gray-800">Bolt's Response:</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  AuraNest's Response:
+                </h3>
                 <span className="ml-2 text-sm text-green-600 flex items-center">
                   <Check className="h-4 w-4 mr-1" />
                   Precise Implementation
@@ -217,7 +224,9 @@ console.log(longestPalindrome("ac"));    // "a"`
               </div>
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
                 <pre className="text-gray-300 font-mono text-sm">
-                  <code>{examples[activeTab as keyof typeof examples].response}</code>
+                  <code>
+                    {examples[activeTab as keyof typeof examples].response}
+                  </code>
                 </pre>
               </div>
             </div>
