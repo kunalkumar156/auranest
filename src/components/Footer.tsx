@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <div className="relative overflow-hidden pb-[16rem]">
+    <div className="relative overflow-hidden md:pb-[16rem] pb-[10rem]">
       <div className="pt-[20px] md:pt-[50px] md:pb-0  ">
         <div className="bg-gray-50 text-gray-600 border-t border-gray-200">
           <div className="pt-10 md:pt-20">
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               </p>
 
               <h1
-                className="hidden lg:block absolute bottom-[-7rem] left-1/2 transform -translate-x-1/2 text-[16rem] font-extrabold tracking-tighter bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 text-transparent bg-clip-text z-0 pointer-events-none"
+                className="md:hidden lg:block absolute bottom-[-2rem] md:bottom-[-7rem] left-1/2 transform -translate-x-1/2 text-[5.5rem] md:text-[16rem] font-extrabold tracking-tighter bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 text-transparent bg-clip-text z-0 pointer-events-none"
                 style={{ WebkitTextFillColor: "transparent" }}
               >
                 auraNest
