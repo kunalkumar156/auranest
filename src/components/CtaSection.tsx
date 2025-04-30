@@ -19,7 +19,7 @@ const CtaSection: React.FC = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-            Experience the power of AuraNest's precise implementation and unlock
+            Experience the power of auraNest's precise implementation and unlock
             your full potential as a developer. No more wasting time on
             repetitive tasks or debugging issues.
           </p>

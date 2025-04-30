@@ -33,10 +33,10 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
 const FaqSection: React.FC = () => {
   const faqs = [
     {
-      question: "What is AuraNest?",
+      question: "What is auraNest?",
       answer: (
         <p>
-          AuraNest is an expert AI assistant and exceptional senior software
+          auraNest is an expert AI assistant and exceptional senior software
           developer with vast knowledge across multiple programming languages,
           frameworks, and best practices. It's designed to help you implement
           exactly what you need in your projects.
@@ -44,22 +44,22 @@ const FaqSection: React.FC = () => {
       ),
     },
     {
-      question: "How can AuraNest help me with my coding projects?",
+      question: "How can auraNest help me with my coding projects?",
       answer: (
         <p>
-          AuraNest can help you with a wide range of tasks including code
+          auraNest can help you with a wide range of tasks including code
           implementation, debugging, architecture design, optimization, and
           more. Whether you need to create a component, set up a full-stack
-          application, or solve a complex algorithm, AuraNest can provide
+          application, or solve a complex algorithm, auraNest can provide
           precise solutions tailored to your needs.
         </p>
       ),
     },
     {
-      question: "What programming languages does AuraNest support?",
+      question: "What programming languages does auraNest support?",
       answer: (
         <p>
-          AuraNest supports a wide range of programming languages including
+          auraNest supports a wide range of programming languages including
           JavaScript, TypeScript, Python, Java, C#, Go, Rust, PHP, Ruby, and
           many more. It also has expertise in various frameworks and libraries
           such as React, Vue, Angular, Node.js, Django, Spring Boot, .NET, and
@@ -68,32 +68,32 @@ const FaqSection: React.FC = () => {
       ),
     },
     {
-      question: "Can AuraNest help with database design and implementation?",
+      question: "Can auraNest help with database design and implementation?",
       answer: (
         <p>
-          Yes, AuraNest has expertise in database design, schema optimization,
+          Yes, auraNest has expertise in database design, schema optimization,
           and query performance. It can help with SQL and NoSQL databases,
-          including PostgreSQL, MySQL, MongoDB, and others. AuraNest can assist
+          including PostgreSQL, MySQL, MongoDB, and others. auraNest can assist
           with everything from database schema design to writing efficient
           queries and setting up ORM configurations.
         </p>
       ),
     },
     {
-      question: "Is AuraNest available 24/7?",
+      question: "Is auraNest available 24/7?",
       answer: (
         <p>
-          Yes, AuraNest is available 24/7 to assist you with your development
+          Yes, auraNest is available 24/7 to assist you with your development
           needs. You can ask for help anytime and receive precise
           implementations and guidance regardless of your time zone.
         </p>
       ),
     },
     {
-      question: "How does AuraNest differ from other coding assistants?",
+      question: "How does auraNest differ from other coding assistants?",
       answer: (
         <p>
-          AuraNest stands out by providing precise implementations that match
+          auraNest stands out by providing precise implementations that match
           exactly what you request—nothing more, nothing less. It understands
           both the technical details and the broader context of software
           development, allowing it to provide solutions that are not just
@@ -112,7 +112,7 @@ const FaqSection: React.FC = () => {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-            Get answers to common questions about AuraNest and how it can help
+            Get answers to common questions about auraNest and how it can help
             you.
           </p>
         </div>

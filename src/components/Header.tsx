@@ -29,8 +29,8 @@ const Header: React.FC = () => {
       <div
         className={`shadow-md border rounded-[25px] w-[91%] m-4 max-w-5xl mx-auto transition-all duration-300 ${
           isScrolled
-            ? "bg-transparent backdrop-blur-3xl shadow-md py-3"
-            : "bg-white backdrop-blur-3xl py-4"
+            ? "bg-transparent backdrop-blur-3xl shadow-lg py-3"
+            : "bg-gray-50 backdrop-blur-3xl py-4"
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex">
             <div className="flex space-x-4">
               <a
-                href="https://github.com/kunalkumar156/auranest"
+                href="https://github.com/kunalkumar156/auraNest"
                 target="_blank"
                 className=" "
               >

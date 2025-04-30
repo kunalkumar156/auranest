@@ -147,10 +147,10 @@ console.log(longestPalindrome("ac"));    // "a"`,
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            See AuraNest in Action
+            See auraNest in Action
           </h2>
           <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-            From UI components to algorithms, AuraNest helps you implement
+            From UI components to algorithms, auraNest helps you implement
             solutions quickly and accurately.
           </p>
         </div>
@@ -215,7 +215,7 @@ console.log(longestPalindrome("ac"));    // "a"`,
             <div>
               <div className="flex items-center mb-2">
                 <h3 className="text-lg font-semibold text-gray-800">
-                  AuraNest's Response:
+                  auraNest's Response:
                 </h3>
                 <span className="ml-2 text-sm text-green-600 flex items-center">
                   <Check className="h-4 w-4 mr-1" />

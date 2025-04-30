@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 function App() {
   useEffect(() => {
     // Update document title
-    document.title = "AuraNest – The Expert AI Builder from AuraUI";
+    document.title = "auraNest – The Expert AI Builder from AuraUI";
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
