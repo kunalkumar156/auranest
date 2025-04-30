@@ -3,7 +3,7 @@ import { ArrowRight, Terminal, Code, Sparkles } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-indigo-50 to-purple-50">
+    <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-indigo-50 to-purple-100">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
