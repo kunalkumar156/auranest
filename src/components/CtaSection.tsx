@@ -5,7 +5,7 @@ const CtaSection: React.FC = () => {
   return (
     <section
       id="get-started"
-      className="py-16 md:py-24 bg-gradient-to-br from-indigo-600 to-purple-700 text-white"
+      className="py-16 md:py-24 bg-gradient-to-br from-indigo-200 to-purple-700 text-white"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -27,14 +27,14 @@ const CtaSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="#"
-              className="bg-white text-indigo-700 hover:bg-indigo-50 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition flex items-center justify-center"
+              className="bg-white text-indigo-700 hover:bg-purple-50 font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition flex items-center justify-center"
             >
               Get Started Free
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
               href="#"
-              className="bg-indigo-800/40 hover:bg-indigo-800/60 border border-indigo-400 text-white font-semibold py-3 px-8 rounded-lg transition flex items-center justify-center"
+              className="bg-purple-800/90 hover:bg-purple-800/60 border border-indigo-400 text-white font-semibold py-3 px-8 rounded-lg transition flex items-center justify-center"
             >
               View Documentation
             </a>

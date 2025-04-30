@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Terminal, Code, Sparkles } from "lucide-react";
+import { ArrowRight, Terminal, Sparkles } from "lucide-react";
 
 const HeroSection: React.FC = () => {
   return (
