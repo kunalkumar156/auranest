@@ -6,7 +6,7 @@ import {
   Image,
   User,
 } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const endings = [
   " a landing page for my startup...",
@@ -45,9 +45,19 @@ const TypingBox: React.FC = () => {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [customPrompt, setCustomPrompt] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [textAreaHeight, setTextAreaHeight] = useState("auto");
 
   useEffect(() => {
-    if (customPrompt) return;
+    if (customPrompt) {
+      setAnimatedPart(""); // Immediately clear animated text if user starts typing
+      return;
+    }
+
+    if (isFocused) {
+      return;
+    }
 
     const current = endings[sentenceIndex];
     const delay = isDeleting ? 30 : 70;
@@ -71,48 +81,97 @@ const TypingBox: React.FC = () => {
     }, delay);
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, sentenceIndex, customPrompt]);
+  }, [charIndex, isDeleting, sentenceIndex, customPrompt, isFocused]);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+    if (!customPrompt) {
+      // Restart animation only if the user hasn't typed anything
+      setCharIndex(0);
+      setIsDeleting(false);
+    }
+  };
+
+  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    setCustomPrompt(value);
+    textareaRef.current!.style.height = "auto";
+    textareaRef.current!.style.height = `${
+      textareaRef.current!.scrollHeight
+    }px`;
+    setTextAreaHeight(textareaRef.current!.style.height);
+  };
+
+  const displayedText =
+    customPrompt || (isFocused ? "" : `Ask auraNest to create${animatedPart}`);
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
-      <div className="bg-white text-gray-900 border border-gray-200 px-5 py-3 rounded-[20px] shadow-md transition text-sm font-medium flex flex-col gap-3">
+    <div className="w-full max-w-3xl mx-auto min-w-[400px] sm:min-w-[500px]">
+      <div className="bg-white text-gray-900 border border-gray-200 px-5 py-4 rounded-[20px] shadow-md transition text-sm font-medium flex flex-col gap-3">
         {/* Text Area */}
-        <p className="text-left text-[15px] leading-tight">
-          <span className="text-gray-800 font-medium">
-            Ask auraNest to create
-          </span>
-          <span className="text-gray-600">
-            {customPrompt ? ` ${customPrompt}` : animatedPart}
-          </span>
-        </p>
+        <div className="relative">
+          <textarea
+            ref={textareaRef}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            value={displayedText}
+            onChange={handleTextChange}
+            placeholder={
+              !isFocused && !animatedPart ? "Ask auraNest to create..." : ""
+            }
+            className={`w-full outline-none text-[15px] leading-tight bg-transparent resize-none overflow-y-auto max-h-[calc(6*1.5rem)] ${
+              customPrompt
+                ? "text-gray-700"
+                : isFocused
+                ? "text-gray-700"
+                : "text-gray-300"
+            } ${
+              animatedPart && !isFocused && !customPrompt
+                ? "animate-pulse-cursor"
+                : ""
+            }`}
+            style={{ height: textAreaHeight }}
+          />
+          {textAreaHeight > "calc(6*1.5rem)" && (
+            <div className="absolute inset-y-0 right-0 w-2 bg-gradient-to-l from-transparent to-gray-200 rounded-r-[20px]">
+              <div className="absolute top-0 right-0 h-full w-0.5 bg-gray-300 rounded-r" />
+            </div>
+          )}
+        </div>
 
         {/* Actions */}
         <div className="flex justify-between items-center">
           <div className="flex gap-2 text-xs text-gray-500">
-            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-600">
+            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-600">
               <Paperclip size={12} />
               Attach
             </button>
-            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition text-gray-600">
+            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-600">
               <Figma size={12} />
               Figma
             </button>
           </div>
-          <button className="p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 transition duration-300 ease-in">
+          <button className="p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 transition duration-200 ease-in">
             <Upload size={14} />
           </button>
         </div>
       </div>
 
       {/* Prompt Buttons */}
-      <div className="flex flex-wrap justify-start gap-2 mt-4">
+      <div className="flex flex-wrap justify-center gap-4 mt-6">
         {prompts.map((prompt, index) => (
           <button
             key={index}
             onClick={() =>
-              setCustomPrompt(prompt.text.replace("Ask auraNest to ", ""))
+              setCustomPrompt(
+                prompt.text.replace("Ask auraNest to create ", ""),
+              )
             }
-            className="flex items-center gap-1 bg-white text-gray-700 border border-gray-200 px-3 py-1.5 rounded-full shadow-sm hover:bg-gray-100 transition text-xs"
+            className="flex items-center gap-1 bg-gray-50 text-gray-700 border border-gray-200 px-3 py-1.5 rounded-full shadow-md hover:bg-gray-200 duration-200 ease-in transition text-sm"
           >
             {prompt.icon}
             {prompt.label}
