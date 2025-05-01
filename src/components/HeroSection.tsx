@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import PromptBox from "./PromptBox";
 
 const HeroSection: React.FC = () => {
   return (
@@ -17,6 +18,10 @@ const HeroSection: React.FC = () => {
               auraNest helps you build faster with precise code implementation
               and expert guidance across multiple programming languages.
             </p>
+
+            <div className="mt-8 md:mt-10">
+              <PromptBox />
+            </div>
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#get-started"
