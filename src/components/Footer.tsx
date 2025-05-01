@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <div className="relative overflow-hidden md:pb-[16rem] pb-[10rem]">
       <div className="pt-[20px] md:pt-[50px] md:pb-0  ">
-        <div className="bg-gray-50 text-gray-600 border-t border-gray-200">
+        <div className="bg-gray-50 text-gray-700 border-t border-gray-200">
           <div className="pt-10 md:pt-20">
             <div className="flex flex-col items-center justify-center text-center px-4">
               <div className="mb-6">

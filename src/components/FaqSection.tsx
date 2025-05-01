@@ -25,7 +25,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
           <ChevronDown className="h-5 w-5 text-gray-500" />
         )}
       </button>
-      {isOpen && <div className="mt-3 text-gray-600">{answer}</div>}
+      {isOpen && <div className="mt-3 text-gray-700">{answer}</div>}
     </div>
   );
 };

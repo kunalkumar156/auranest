@@ -18,7 +18,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <Icon className="h-6 w-6 text-indigo-600" />
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-700">{description}</p>
     </div>
   );
 };

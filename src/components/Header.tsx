@@ -41,19 +41,19 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex space-x-8">
             <a
               href="#features"
-              className="text-gray-600 hover:text-gray-900 font-medium transition"
+              className="text-gray-700 hover:text-gray-900 font-medium transition"
             >
               Features
             </a>
             <a
               href="#examples"
-              className="text-gray-600 hover:text-gray-900 font-medium transition"
+              className="text-gray-700 hover:text-gray-900 font-medium transition"
             >
               Examples
             </a>
             <a
               href="#faq"
-              className="text-gray-600 hover:text-gray-900 font-medium transition"
+              className="text-gray-700 hover:text-gray-900 font-medium transition"
             >
               FAQ
             </a>
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
                 target="_blank"
                 className=" "
               >
-                <div className="flex items-center p-2 border border-gray-200 text-gray-600 hover:text-gray-900 bg-white hover:bg-gray-100 justify-center rounded-xl shadow-sm transition duration-300 ease-in">
+                <div className="flex items-center p-2 border border-gray-200 text-gray-700 hover:text-gray-900 bg-white hover:bg-gray-100 justify-center rounded-xl shadow-sm transition duration-300 ease-in">
                   <Github size={20} />
                 </div>
               </a>

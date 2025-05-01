@@ -14,27 +14,20 @@ const HeroSection: React.FC = () => {
                 Deploy.
               </span>
             </p>
-            <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-700 max-w-xl mx-auto">
-              auraNest helps you build faster with precise code implementation
-              and expert guidance across multiple programming languages.
+            <p className="mt-4 md:mt-2 text-lg md:text-xl text-gray-700 font-semibold max-w-xl mx-auto">
+              From Idea to Implementation, Beautifully Fast. auraNest.
             </p>
 
             <div className="mt-8 md:mt-10">
               <PromptBox />
             </div>
-            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#get-started"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg transition shadow-md hover:shadow-lg flex items-center justify-center"
+                className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-3 px-8 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="#examples"
-                className="border border-gray-300 hover:border-indigo-600 text-gray-900 hover:text-indigo-600 font-medium py-3 px-8 rounded-lg transition flex items-center justify-center"
-              >
-                See Examples
+                <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </div>
           </div>

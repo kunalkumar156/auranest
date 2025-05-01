@@ -110,7 +110,7 @@ const TypingBox: React.FC = () => {
     customPrompt || (isFocused ? "" : `Ask auraNest to create${animatedPart}`);
 
   return (
-    <div className="w-full max-w-3xl mx-auto min-w-[400px] sm:min-w-[500px]">
+    <div className="w-full max-w-3xl mx-auto">
       <div className="bg-white text-gray-900 border border-gray-200 px-5 py-4 rounded-[20px] shadow-md transition text-sm font-medium flex flex-col gap-3">
         {/* Text Area */}
         <div className="relative">
@@ -146,23 +146,23 @@ const TypingBox: React.FC = () => {
         {/* Actions */}
         <div className="flex justify-between items-center">
           <div className="flex gap-2 text-xs text-gray-500">
-            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-600">
+            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-700">
               <Paperclip size={12} />
               Attach
             </button>
-            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-600">
+            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-700">
               <Figma size={12} />
               Figma
             </button>
           </div>
-          <button className="p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 transition duration-200 ease-in">
+          <button className="p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition duration-200 ease-in">
             <Upload size={14} />
           </button>
         </div>
       </div>
 
       {/* Prompt Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mt-6">
+      <div className="flex flex-wrap justify-center gap-4 mt-4">
         {prompts.map((prompt, index) => (
           <button
             key={index}
@@ -171,7 +171,7 @@ const TypingBox: React.FC = () => {
                 prompt.text.replace("Ask auraNest to create ", ""),
               )
             }
-            className="flex items-center gap-1 bg-gray-50 text-gray-700 border border-gray-200 px-3 py-1.5 rounded-full shadow-md hover:bg-gray-200 duration-200 ease-in transition text-sm"
+            className="flex items-center gap-1 bg-gray-50 text-gray-700 border border-gray-200 px-3 py-1.5 rounded-[20px] shadow-md hover:bg-gray-200 duration-200 ease-in transition text-sm"
           >
             {prompt.icon}
             {prompt.label}
