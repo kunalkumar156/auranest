@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import React from "react";
 
 interface FeatureCardProps {
@@ -15,11 +16,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   image,
   cardBg,
   overlayBg = "#fef9e4",
-  dotColor = "#D1D5DB",
+  dotColor = "#00000000",
 }) => {
   return (
     <div
-      className="rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 shadow-md"
+      className="rounded-[25px] p-8 md:p-14 flex flex-col md:flex-row items-center gap-8 md:gap-20 shadow-md"
       style={{
         backgroundImage: cardBg?.startsWith("/") ? `url(${cardBg})` : undefined,
         backgroundColor: cardBg?.startsWith("#") ? cardBg : undefined,
@@ -29,7 +30,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       }}
     >
       {/* Image Container */}
-      <div className="relative rounded-xl overflow-hidden w-full md:w-1/2 aspect-video transition-transform duration-300 ease-in-out transform hover:scale-105">
+      <div className="relative rounded-[25px] overflow-hidden w-80 aspect-[5/4] transition duration-500 ease-in-out transform hover:shadow-lg">
         <div
           className="absolute inset-0"
           style={{ backgroundColor: overlayBg }}
@@ -40,7 +41,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             <img
               src={image}
               alt={title}
-              className="absolute inset-0 object-cover w-[90%] h-[90%] rounded-xl shadow-lg m-auto"
+              className="absolute inset-0 object-cover w-[90%] h-[87%] mt-6 rounded-[25px] shadow-lg m-auto"
             />
           </div>
         )}
@@ -49,7 +50,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="w-3 h-3 rounded-full"
+              className="w-2 h-2 ml-3 mt-1 rounded-full"
               style={{ backgroundColor: dotColor }}
             ></div>
           ))}
@@ -57,16 +58,22 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       </div>
 
       {/* Text Content */}
-      <div className="flex flex-col items-center md:items-start md:w-1/2">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center md:text-left mb-3">
+      <div className="flex flex-col items-center md:items-start md:w-[60%]">
+        <h2 className="text-3xl md:text-7xl font-bold text-gray-700 text-center md:text-left mb-3">
           {title}
         </h2>
         <p className="text-gray-600 text-center md:text-left mb-6">
           {description}
         </p>
-        <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md px-6 py-3">
-          Create Website
-        </button>
+        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#get-started"
+            className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-3 px-8 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95"
+          >
+            Get Started
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
+        </div>
       </div>
     </div>
   );
