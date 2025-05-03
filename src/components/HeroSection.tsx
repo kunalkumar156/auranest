@@ -4,13 +4,13 @@ import PromptBox from "./PromptBox";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-white via-purple-200 to-pink-300">
+    <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[url('/bg-image.png')] bg-no-repeat bg-cover bg-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center">
           <div className="mb-10 md:mb-0">
-            <p className="text-4xl md:text-[5rem]  text-gray-400 leading-tight ">
+            <p className="text-4xl md:text-[5rem]  text-gray-200 leading-tight ">
               Describe and{" "}
-              <span className=" text-[4rem] md:text-[10rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-700 ease-in-out hover:drop-shadow-[0_0_3px_rgba(168,85,247,0.6)]">
+              <span className=" text-[4rem] md:text-[10rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 transition-all duration-700 ease-in-out hover:drop-shadow-[0_0_3px_rgba(168,85,247,0.6)]">
                 Deploy.
               </span>
             </p>
