@@ -5,21 +5,67 @@ const features = [
     title: "Website Builder for Developers",
     description:
       "AuraUI helps you create stunning, production-ready UIs faster with prebuilt components and customization.",
-    image: "/editor-preview-1.png",
-    cardBg: "#fff1c1",
-    overlayBg: "#fef9e4",
-    dotColor: "#F87171", // red-ish
+
+    image: "/editor-preview-3.png",
+    cardBg: "/gr-purple.png",
+    overlayBg: "#f3e8ff",
+    dotColor: "#A855F7", // purple
   },
   {
     title: "AI Code Assistant",
     description:
       "Generate code, refactor components, and get inline suggestions powered by AuraNest's AI engine.",
     image: "/editor-preview-2.png",
-    cardBg: "#e0f2f1",
+    cardBg: "/gr-blue.png",
     overlayBg: "#b2dfdb",
     dotColor: "#60A5FA", // blue
   },
-  // Add more...
+  {
+    title: "Precise Code Implementation",
+    description:
+      "auraNest implements exactly what you ask for—nothing more, nothing less, ensuring your code is exactly as you need it.",
+    image: "/editor-preview-1.png",
+    cardBg: "/gr-orange.png",
+    overlayBg: "#fef9e4",
+    dotColor: "#F87171", // red-ish
+  },
+
+  {
+    title: "Cross-Language Expertise",
+    description:
+      "Get expert assistance across multiple programming languages, frameworks, and best practices.",
+    image: "/editor-preview-4.png",
+    cardBg: "/gr-teal.png",
+    overlayBg: "#ccfbf1",
+    dotColor: "#14B8A6", // teal
+  },
+  {
+    title: "Educational Insights",
+    description:
+      "Learn while building with clear explanations and context for every code solution.",
+    image: "/editor-preview-5.png",
+    cardBg: "/gr-pink.png",
+    overlayBg: "#ffe4e6",
+    dotColor: "#EC4899", // pink
+  },
+  {
+    title: "Seamless Integration",
+    description:
+      "Works right in your browser with no setup required, making development faster and more efficient.",
+    image: "/editor-preview-6.png",
+    cardBg: "/gr-yellow.png",
+    overlayBg: "#fef9c3",
+    dotColor: "#EAB308", // yellow
+  },
+  {
+    title: "Lightning Fast",
+    description:
+      "Get immediate responses and solutions, keeping your development momentum going.",
+    image: "/editor-preview-7.png",
+    cardBg: "/gr-red.png",
+    overlayBg: "#fee2e2",
+    dotColor: "#EF4444", // red
+  },
 ];
 
 const FeatureSection = () => {
