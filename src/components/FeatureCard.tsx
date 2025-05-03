@@ -59,13 +59,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
       {/* Text Content */}
       <div className="flex flex-col items-center md:items-start md:w-[60%]">
-        <h2 className="text-3xl md:text-7xl font-bold text-gray-700 text-center md:text-left mb-3">
+        <h2 className="text-3xl md:text-7xl font-bold text-white text-center md:text-left mb-3">
           {title}
         </h2>
-        <p className="text-gray-600 text-center md:text-left mb-6">
-          {description}
-        </p>
-        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <p className="text-gray-700 text-center md:text-left">{description}</p>
+        <div className="mt-8 md:mt-6 flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#get-started"
             className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-3 px-8 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95"

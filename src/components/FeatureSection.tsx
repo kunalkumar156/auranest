@@ -4,7 +4,7 @@ const features = [
   {
     title: "Website Builder",
     description:
-      "AuraUI helps you create stunning, production-ready UIs faster with prebuilt components and customization.",
+      "AuraUI provides a comprehensive suite of tools that empower you to create stunning, high-performance, production-ready user interfaces faster than ever before. With an extensive library of prebuilt components and customization options, you can design and deploy beautiful websites without starting from scratch, significantly reducing development time and effort.",
     image: "/features/feature1.webp",
     cardBg: "/gradients/gr-purple.png",
     overlayBg: "#f3e8ff",
@@ -13,7 +13,7 @@ const features = [
   {
     title: "AI Code Assistant",
     description:
-      "Generate code, refactor components, and get inline suggestions powered by AuraNest's AI engine.",
+      "AuraNest's cutting-edge AI engine assists you in generating code, refactoring components, and offering inline suggestions to optimize your development workflow. This intelligent assistant understands your coding needs, guiding you through best practices and suggesting improvements in real-time, error-free code faster and more intuitive than ever before.",
     image: "/editor-preview-2.png",
     cardBg: "/gradients/gr-blue.png",
     overlayBg: "#e0f2f1",
@@ -22,7 +22,7 @@ const features = [
   {
     title: "Precise Codes",
     description:
-      "auraNest implements exactly what you ask for—nothing more, nothing less, ensuring your code is exactly as you need it.",
+      "AuraNest delivers exactly what you ask for—no extra, no less. The AI-powered tool ensures that your code is implemented exactly as requested, maintaining the highest standards of precision and clarity. Whether it's complex logic or simple tasks, you can trust that the generated code will match your requirements perfectly, saving you time and eliminating errors.",
     image: "/editor-preview-1.png",
     cardBg: "/gradients/gr-orange.png",
     overlayBg: "#fef9e4",
@@ -31,7 +31,7 @@ const features = [
   {
     title: "Cross-Language",
     description:
-      "Get expert assistance across multiple programming languages, frameworks, and best practices.",
+      "With AuraNest, you get expert assistance across a wide range of programming languages and frameworks. Whether you're working with JavaScript, Python, Java, or any other language, AuraNest's AI assistant provides guidance on best practices to ensure that your code is not only functional but also efficient and scalable across different environments.",
     image: "/editor-preview-4.png",
     cardBg: "/gradients/gr-teal.png",
     overlayBg: "#ccfbf1",
@@ -40,7 +40,7 @@ const features = [
   {
     title: "Educational Insights",
     description:
-      "Learn while building with clear explanations and context for every code solution.",
+      "AuraNest makes learning part of the development process. As you build, you'll receive clear explanations and contextual insights for every code solution it generates. This ensures that you understand the 'why' behind every suggestion and refactor, helping you not only complete your projects but also grow your coding knowledge and skills with each step.",
     image: "/editor-preview-5.png",
     cardBg: "/gradients/gr-pink.png",
     overlayBg: "#ffe4e6",
@@ -49,7 +49,7 @@ const features = [
   {
     title: "Easy Integration",
     description:
-      "Works right in your browser with no setup required, making development faster and more efficient.",
+      "AuraNest is designed to integrate seamlessly into your existing workflow, working directly within your browser with no setup required. This effortless integration allows you to start coding right away, eliminating the need for complex installations or configurations. Your development process becomes faster, more efficient, and entirely hassle-free.",
     image: "/editor-preview-6.png",
     cardBg: "/gradients/gr-yellow.png",
     overlayBg: "#fef9c3",
@@ -58,7 +58,7 @@ const features = [
   {
     title: "Lightning Fast",
     description:
-      "Get immediate responses and solutions, keeping your development momentum going.",
+      "AuraNest is optimized to deliver instant responses, keeping your development momentum uninterrupted. Whether you're generating code or troubleshooting issues, the assistant's lightning-fast suggestions and solutions ensure that you never lose focus, making the coding process more productive and enjoyable.",
     image: "/editor-preview-7.png",
     cardBg: "/gradients/gr-red.png",
     overlayBg: "#fcdcdc",
