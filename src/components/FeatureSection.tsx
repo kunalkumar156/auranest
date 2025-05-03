@@ -1,71 +1,31 @@
-import React from "react";
-import {
-  Code,
-  Rocket,
-  BookOpen,
-  Share2,
-  Zap,
-  Search,
-  Shield,
-  Palette,
-} from "lucide-react";
 import FeatureCard from "./FeatureCard";
 
-const FeatureSection: React.FC = () => {
-  const features = [
-    {
-      icon: Code,
-      title: "Precise Code Implementation",
-      description:
-        "auraNest implements exactly what you ask for—nothing more, nothing less, ensuring your code is exactly as you need it.",
-    },
-    {
-      icon: Rocket,
-      title: "Cross-Language Expertise",
-      description:
-        "Get expert assistance across multiple programming languages, frameworks, and best practices.",
-    },
-    {
-      icon: BookOpen,
-      title: "Educational Insights",
-      description:
-        "Learn while building with clear explanations and context for every code solution.",
-    },
-    {
-      icon: Share2,
-      title: "Seamless Integration",
-      description:
-        "Works right in your browser with no setup required, making development faster and more efficient.",
-    },
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description:
-        "Get immediate responses and solutions, keeping your development momentum going.",
-    },
-    {
-      icon: Search,
-      title: "Context Awareness",
-      description:
-        "auraNest understands your project context and makes appropriate suggestions.",
-    },
-    {
-      icon: Shield,
-      title: "Secure Development",
-      description:
-        "Suggests secure coding practices and helps identify potential vulnerabilities.",
-    },
-    {
-      icon: Palette,
-      title: "Beautiful UI Design",
-      description:
-        "Creates responsive, production-ready UI components with modern design principles.",
-    },
-  ];
+const features = [
+  {
+    title: "Website Builder for Developers",
+    description:
+      "AuraUI helps you create stunning, production-ready UIs faster with prebuilt components and customization.",
+    image: "/editor-preview-1.png",
+    cardBg: "#fff1c1",
+    overlayBg: "#fef9e4",
+    dotColor: "#F87171", // red-ish
+  },
+  {
+    title: "AI Code Assistant",
+    description:
+      "Generate code, refactor components, and get inline suggestions powered by AuraNest's AI engine.",
+    image: "/editor-preview-2.png",
+    cardBg: "#e0f2f1",
+    overlayBg: "#b2dfdb",
+    dotColor: "#60A5FA", // blue
+  },
+  // Add more...
+];
 
+const FeatureSection = () => {
   return (
     <section id="features" className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 space-y-16">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             What auraNest Can Do For You
@@ -76,16 +36,9 @@ const FeatureSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
-        </div>
+        {features.map((feature, idx) => (
+          <FeatureCard key={idx} {...feature} />
+        ))}
       </div>
     </section>
   );
