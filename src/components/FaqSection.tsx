@@ -1,31 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface FaqItemProps {
   question: string;
   answer: React.ReactNode;
+  index: number;
+  openIndex: number | null;
+  setOpenIndex: (index: number | null) => void;
 }
 
-const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const FaqItem: React.FC<FaqItemProps> = ({
+  question,
+  answer,
+  index,
+  openIndex,
+  setOpenIndex,
+}) => {
+  const isOpen = index === openIndex;
+
+  const toggleOpen = useCallback(() => {
+    setOpenIndex(index === openIndex ? null : index);
+  }, [index, setOpenIndex]);
 
   return (
     <div className="border-b border-gray-200 py-4">
       <button
         className="flex justify-between items-center w-full text-left"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleOpen}
         aria-expanded={isOpen}
       >
         <h3 className="text-lg md:text-xl font-medium text-gray-900">
           {question}
         </h3>
-        {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-gray-500" />
-        ) : (
-          <ChevronDown className="h-5 w-5 text-gray-500" />
-        )}
+        <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
+          {isOpen ? (
+            <ChevronUp className="h-5 w-5 text-gray-500" />
+          ) : (
+            <ChevronDown className="h-5 w-5 text-gray-500" />
+          )}
+        </motion.div>
       </button>
-      {isOpen && <div className="mt-3 text-gray-700">{answer}</div>}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="mt-3 text-gray-700"
+          >
+            {answer}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -104,6 +132,8 @@ const FaqSection: React.FC = () => {
     },
   ];
 
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
@@ -119,7 +149,14 @@ const FaqSection: React.FC = () => {
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <FaqItem key={index} question={faq.question} answer={faq.answer} />
+            <FaqItem
+              key={index}
+              index={index}
+              question={faq.question}
+              answer={faq.answer}
+              openIndex={openIndex}
+              setOpenIndex={setOpenIndex}
+            />
           ))}
         </div>
       </div>
