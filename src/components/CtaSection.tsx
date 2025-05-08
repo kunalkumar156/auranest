@@ -1,22 +1,11 @@
 import React from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-import { useEffect } from "react";
-
 const CtaSection: React.FC = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // animation duration
-      once: true, // animate only once
-    });
-  }, []);
   return (
     <section
       id="get-started"
-      className="py-16 md:py-24 max-w-6xl mx-auto rounded-[25px] bg-gradient-to-br from-indigo-200 to-purple-700 text-white"
+      className="m-8 py-16 md:py-24 md:max-w-6xl mx-auto rounded-[25px] bg-gradient-to-br from-indigo-200 to-purple-700 text-white"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -25,12 +14,9 @@ const CtaSection: React.FC = () => {
             <span className="font-semibold">Start building faster today</span>
           </div>
 
-          <p
-            className="text-4xl md:text-[3rem] mb-4 md:mb-6  text-gray-200 leading-tight "
-            data-aos="fade-up"
-          >
+          <p className="text-4xl md:text-[3rem] mb-4 md:mb-6  text-gray-200 leading-tight ">
             Supercharge{" "}
-            <span className=" text-[4rem] md:text-[5rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 transition-all duration-1000 ease-in-out ">
+            <span className=" text-[3rem] md:text-[5rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 transition-all duration-1000 ease-in-out ">
               Development.
             </span>
           </p>

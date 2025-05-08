@@ -138,11 +138,11 @@ const FaqSection: React.FC = () => {
     <section id="faq" className="md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <p className=" -mt-12 md:-mt-20 -mb-32 text-[4rem] md:text-[13rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gray-200 transition-all duration-700 ease-in-out ">
+          <p className=" -mt-2 md:-mt-20 -mb-[75px] md:-mb-32 text-[4rem] md:text-[13rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gray-200 transition-all duration-700 ease-in-out ">
             Questions.
           </p>
         </div>
-        <div className="p-10 pt-28  max-w-6xl mx-auto rounded-[25px] shadow-lg bg-gray-200">
+        <div className="p-10 md:pt-28  max-w-6xl mx-auto rounded-[25px] shadow-lg bg-gray-200">
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <FaqItem
