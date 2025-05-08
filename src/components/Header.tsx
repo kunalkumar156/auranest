@@ -45,12 +45,7 @@ const Header: React.FC = () => {
             >
               Features
             </a>
-            <a
-              href="#examples"
-              className="text-gray-700 hover:text-gray-900 font-medium transition"
-            >
-              Examples
-            </a>
+
             <a
               href="#faq"
               className="text-gray-700 hover:text-gray-900 font-medium transition"
@@ -60,7 +55,16 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex">
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
+              <a href="https://www.auraui.com" target="_blank" className=" ">
+                <div className="flex items-center p-2 border border-gray-200 text-gray-700 hover:text-gray-900 bg-white hover:bg-gray-100 justify-center rounded-xl shadow-sm transition duration-300 ease-in">
+                  <img
+                    src="/auraui-logo.png"
+                    alt="auraui-logo"
+                    className="h-[20px] w-[20px] rounded-full"
+                  />
+                </div>
+              </a>
               <a
                 href="https://github.com/kunalkumar156/auraNest"
                 target="_blank"

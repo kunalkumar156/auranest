@@ -139,7 +139,7 @@ const FaqSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <p className=" -mt-12 md:-mt-20 -mb-32 text-[4rem] md:text-[13rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gray-200 transition-all duration-700 ease-in-out ">
-            Questions
+            Questions.
           </p>
         </div>
         <div className="p-10 pt-28  max-w-6xl mx-auto rounded-[25px] shadow-lg bg-gray-200">

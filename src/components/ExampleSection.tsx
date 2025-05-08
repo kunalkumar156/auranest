@@ -24,7 +24,7 @@ const ExampleSection: React.FC = () => {
             style={{ y }}
             className="block text-[4rem] md:text-[12rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-500"
           >
-            faster
+            faster.
           </motion.span>
         </p>
       </div>
