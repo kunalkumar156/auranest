@@ -63,7 +63,7 @@ const FeatureSection = () => {
   }, []);
 
   return (
-    <section id="features" className="bg-[#Fbfbfb] py-16 md:py-24">
+    <section id="features" className="bg-[#Fbfbfb] py-16 md:py-24 md:pb-0">
       <div className="text-center mb-12 md:mb-0">
         <p
           className="text-4xl md:text-[5rem]  text-gray-200 leading-tight "
