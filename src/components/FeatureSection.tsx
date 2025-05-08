@@ -39,18 +39,18 @@ const features = [
     description:
       "AuraNest is designed to integrate seamlessly into your existing workflow, working directly within your browser with no setup required. This effortless integration allows you to start coding right away, eliminating the need for complex installations or configurations. Your development process becomes faster, more efficient, and entirely hassle-free.",
     image: "/features/features6.jpeg",
-    cardBg: "/gradients/gr-yellow.png",
-    overlayBg: "#fef9c3",
-    dotColor: "#FEF08A", // light yellow
+    cardBg: "/gradients/gr-pink2.png",
+    overlayBg: "#FFF1F4", // soft pink overlay
+    dotColor: "#F9A8D4", // pastel pink dot
   },
   {
     title: "Precise Codes",
     description:
       "AuraNest delivers exactly what you ask for—no extra, no less. The AI-powered tool ensures that your code is implemented exactly as requested, maintaining the highest standards of precision and clarity. Whether it's complex logic or simple tasks, you can trust that the generated code will match your requirements perfectly, saving you time and eliminating errors.",
     image: "/features/features11.jpeg",
-    cardBg: "/gradients/gr-orange.png",
-    overlayBg: "#fef9e4",
-    dotColor: "#FECACA", // light red
+    cardBg: "/gradients/gr-purple2.png",
+    overlayBg: "#F5EBFF",
+    dotColor: "#D8B4F8", // light red
   },
 ];
 
@@ -63,7 +63,7 @@ const FeatureSection = () => {
   }, []);
 
   return (
-    <section id="features" className="bg-[#Fbfbfb] py-16 md:py-24 md:pb-0">
+    <section id="features" className="bg-[#fff] py-16 md:py-24 md:pb-0">
       <div className="text-center mb-12 md:mb-0">
         <p
           className="text-4xl md:text-[5rem]  text-gray-200 leading-tight "
