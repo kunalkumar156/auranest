@@ -1,6 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import React from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { useEffect } from "react";
+
 interface FeatureCardProps {
   title: string;
   description: string;
@@ -18,6 +23,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   overlayBg = "#fef9e4",
   dotColor = "#00000000",
 }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true, // animate only once
+    });
+  }, []);
   return (
     <div
       className="rounded-[25px] p-8 md:p-14 flex flex-col md:flex-row items-center gap-8 md:gap-20 shadow-md"
@@ -41,7 +52,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             <img
               src={image}
               alt={title}
-              className="absolute inset-0 object-cover w-[90%] h-[87%] mt-6 rounded-[25px] shadow-lg m-auto"
+              className="absolute inset-0 object-cover w-[90%] h-[87%] mt-6 rounded-[10px] shadow-lg m-auto"
             />
           </div>
         )}
@@ -59,14 +70,23 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
       {/* Text Content */}
       <div className="flex flex-col items-center md:items-start md:w-[60%]">
-        <h2 className="text-3xl md:text-7xl font-bold text-white text-center md:text-left mb-3">
+        <h2
+          className="text-3xl md:text-7xl font-bold text-white text-center md:text-left mb-3"
+          data-aos="fade-up"
+        >
           {title}
         </h2>
-        <p className="text-gray-700 text-center md:text-left">{description}</p>
+        <p
+          className="text-gray-700 text-center md:text-left"
+          data-aos="fade-up"
+        >
+          {description}
+        </p>
         <div className="mt-8 md:mt-6 flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#get-started"
             className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-3 px-8 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95"
+            data-aos="fade-up"
           >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
