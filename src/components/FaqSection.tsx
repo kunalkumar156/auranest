@@ -30,7 +30,7 @@ const FaqItem: React.FC<FaqItemProps> = ({
         onClick={toggleOpen}
         aria-expanded={isOpen}
       >
-        <h3 className="text-lg md:text-xl font-medium text-gray-900">
+        <h3 className="text-lg md:text-xl font-medium text-gray-800">
           {question}
         </h3>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
@@ -48,7 +48,7 @@ const FaqItem: React.FC<FaqItemProps> = ({
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="mt-3 text-gray-700"
+            className="mt-3 text-gray-600"
           >
             {answer}
           </motion.div>
@@ -135,29 +135,26 @@ const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-white">
+    <section id="faq" className="md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-            Get answers to common questions about auraNest and how it can help
-            you.
+          <p className=" -mt-12 md:-mt-20 -mb-32 text-[4rem] md:text-[13rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gray-200 transition-all duration-700 ease-in-out ">
+            Questions
           </p>
         </div>
-
-        <div className="max-w-3xl mx-auto">
-          {faqs.map((faq, index) => (
-            <FaqItem
-              key={index}
-              index={index}
-              question={faq.question}
-              answer={faq.answer}
-              openIndex={openIndex}
-              setOpenIndex={setOpenIndex}
-            />
-          ))}
+        <div className="p-10 pt-28  max-w-6xl mx-auto rounded-[25px] shadow-lg bg-gray-200">
+          <div className="max-w-3xl mx-auto">
+            {faqs.map((faq, index) => (
+              <FaqItem
+                key={index}
+                index={index}
+                question={faq.question}
+                answer={faq.answer}
+                openIndex={openIndex}
+                setOpenIndex={setOpenIndex}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
