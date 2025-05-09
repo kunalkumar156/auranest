@@ -70,12 +70,12 @@ const FeatureSection = () => {
           data-aos="fade-up"
         >
           Why{" "}
-          <span className=" text-[4rem] md:text-[8rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-500  transition-all duration-700 ease-in-out ">
+          <span className=" text-[3rem] md:text-[8rem] font-bold text-transparent bg-clip-text animate-gradientMove bg-gradient-to-r from-indigo-500 via-purple-400 to-pink-500  transition-all duration-700 ease-in-out ">
             auraNest?
           </span>
         </p>
         <p
-          className="mt-4 text-lg font-semibold text-gray-700 max-w-2xl mx-auto"
+          className="mt-4 -mb-18 md:-mb-0 p-4 md:p-0 text-lg font-semibold text-gray-700 max-w-2xl mx-auto"
           data-aos="fade-up"
         >
           Experience the power of an AI assistant specifically designed for

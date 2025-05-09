@@ -21,10 +21,10 @@ const HeroSection: React.FC = () => {
             <div className="mt-8 md:mt-10">
               <PromptBox />
             </div>
-            <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-center justify-center gap-3 mt-8 sm:flex-row sm:gap-4">
               <a
                 href="#get-started"
-                className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-3 px-8 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95"
+                className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-2.5 px-6 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95 text-sm md:text-base"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />

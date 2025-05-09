@@ -15,7 +15,7 @@ const ExampleSection: React.FC = () => {
     <section
       id="examples"
       ref={ref}
-      className="relative py-14 md:py-20 bg-gray-50"
+      className="relative py-14 md:py-20 bg-white"
     >
       <div className="sticky top-1/2 text-center">
         <p className="text-4xl md:text-[7rem] text-gray-300 leading-tight font-medium flex items-center justify-center gap-6">

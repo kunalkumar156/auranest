@@ -30,7 +30,7 @@ const FaqItem: React.FC<FaqItemProps> = ({
         onClick={toggleOpen}
         aria-expanded={isOpen}
       >
-        <h3 className="text-lg md:text-xl font-medium text-gray-800">
+        <h3 className="text-md md:text-xl font-medium text-gray-800">
           {question}
         </h3>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }}>
