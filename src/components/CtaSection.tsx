@@ -5,9 +5,9 @@ const CtaSection: React.FC = () => {
   return (
     <section
       id="get-started"
-      className="m-4 mt-12 md:mt-0 md:m-8 py-16 md:py-24 max-w-6xl md:mx-auto rounded-[25px] bg-gradient-to-br from-indigo-200 to-purple-700 text-white"
+      className="m-4 mt-12 md:mt-0 md:m-8 py-16 md:py-24 max-w-6xl md:mx-auto rounded-[25px] bg-gradient-to-br from-indigo-200 to-purple-700 text-white shadow-xl "
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 ">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center bg-white/10 rounded-full px-4 py-2">
             <Sparkles className="h-5 w-5 mr-2 text-yellow-300" />
