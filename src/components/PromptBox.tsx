@@ -7,6 +7,7 @@ import {
   User,
 } from "lucide-react";
 import React, { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const endings = [
   " a landing page for my startup...",
@@ -48,6 +49,8 @@ const TypingBox: React.FC = () => {
   const [isFocused, setIsFocused] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [textAreaHeight, setTextAreaHeight] = useState("auto");
+
+  const hasUserInput = customPrompt.trim().length > 0;
 
   useEffect(() => {
     if (customPrompt) {
@@ -106,6 +109,14 @@ const TypingBox: React.FC = () => {
     setTextAreaHeight(textareaRef.current!.style.height);
   };
 
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleUploadClick = () => {
+    if (hasUserInput) {
+      navigate("/generate", { state: { prompt: customPrompt } });
+    }
+  };
+
   const displayedText =
     customPrompt || (isFocused ? "" : `Ask auraNest to create${animatedPart}`);
 
@@ -150,12 +161,20 @@ const TypingBox: React.FC = () => {
               <Paperclip size={12} />
               Attach
             </button>
-            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-700">
+            <button className="flex items-center gap-1 px-2 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200 ease-in text-gray-700 disabled:opacity-50">
               <Figma size={12} />
               Figma
             </button>
           </div>
-          <button className="p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition duration-200 ease-in">
+          <button
+            onClick={handleUploadClick}
+            disabled={!hasUserInput}
+            className={`p-1.5 rounded-full transition duration-200 ease-in ${
+              hasUserInput
+                ? "bg-gray-100 hover:bg-gray-200 text-gray-700 cursor-pointer"
+                : "bg-gray-50 text-gray-300 cursor-not-allowed opacity-80"
+            }`}
+          >
             <Upload size={14} />
           </button>
         </div>
