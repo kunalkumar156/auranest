@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               </p>
 
               <h1
-                className="md:hidden lg:block absolute bottom-[-2rem] md:bottom-[-7rem] left-1/2 transform -translate-x-1/2 text-[5rem] md:text-[16rem] font-extrabold tracking-tighter bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 text-transparent bg-clip-text z-0 pointer-events-none shadow-lg"
+                className="md:hidden lg:block absolute bottom-[-2rem] md:bottom-[-7rem] left-1/2 transform -translate-x-1/2 text-[5rem] md:text-[16rem] font-extrabold tracking-tighter bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 text-transparent bg-clip-text z-0 pointer-events-none"
                 style={{ WebkitTextFillColor: "transparent" }}
               >
                 auraNest

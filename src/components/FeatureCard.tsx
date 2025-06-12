@@ -85,7 +85,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <div className="flex flex-col items-center justify-center gap-3 mt-8 sm:flex-row sm:gap-4">
           <a
             href="#get-started"
-            className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-2.5 px-6 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95 text-sm md:text-base"
+            className=" ease-in duration-200  bg-white text-gray-700 hover:bg-purple-50 font-semibold py-2.5 px-6 rounded-[20px] shadow-lg hover:shadow-2xl transition flex items-center justify-center active:scale-95 text-sm md:text-base z-50"
           >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
